@@ -2,65 +2,107 @@
 import "../styles/style.css";
 ---
 
-<nav>
-  <ul class="dots">
-    <span class="line"></span>
-    <li class="current"></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
-  <div class="scroll_btn">
+<nav class="nav">
+  <span class="line"></span>
+  <div class="nav-item">
+    <a class="nav-link" href="/"></a>
+    <span class="nav-label">Velkommen</span>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="/hvem_er_vi"></a>
+    <span class="nav-label">Hvem er vi?</span>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="/hvem_er_vi"></a>
+    <span class="nav-label">Hvem er vi?</span>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="/fakta"></a>
+    <span class="nav-label">Fakta</span>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="/produkter"></a>
+    <span class="nav-label">Produkter</span>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="/tag_ansvar"></a>
+    <span class="nav-label">Tag ansvar</span>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="/gør_en_forskel"></a>
+    <span class="nav-label">Gør en forskel</span>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="/vidste_du"></a>
+    <span class="nav-label">Vidste du?</span>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" href="/hjælp_verden"></a>
+    <span class="nav-label">Hjælp verden</span>
+  </div>
+  <div class="scroll_btn bouncing">
     <a href="">Scroll ned</a>
     <a class="arrow down" href=""></a>
   </div>
 </nav>
 
 <style>
-  nav {
+  .nav {
     position: fixed;
     right: 40px;
-    display: flex;
-    flex-direction: column;
     top: 10%;
-  }
-
-  .dots {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    position: relative;
-    align-items: center;
+    gap: 30px;
   }
   .line {
     border-left: 2px solid var(--navColor);
-    height: 500px;
+    height: 540px;
     position: absolute;
     z-index: -1;
+    top: 10px;
+    right: 9px;
   }
-
-  .dots li {
+  .nav-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+  .nav-label {
+    text-transform: uppercase;
+    border: 1px solid var(--beigeColor);
+    padding: 5px 10px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--beigeColor);
+    background-color: var(--blueColor);
+    opacity: 0;
+    transition: opacity 0.1s;
+    /* order: 1; */
+  }
+  .nav-link:hover ~ .nav-label {
+    opacity: 1;
+  }
+  .nav-link {
     height: 20px;
     width: 20px;
     background-color: var(--navColor);
     border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
   }
-
+  .nav-link:hover {
+    background-color: var(--redColor);
+  }
+  .nav-link-selected {
+    background-color: var(--redColor);
+  }
   .scroll_btn {
-    position: fixed;
     bottom: 50px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
   }
   .scroll_btn a {
     color: black;
+    cursor: default;
   }
   .arrow {
     border: solid black;
@@ -72,8 +114,26 @@ import "../styles/style.css";
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-  .current {
-    background-color: var(--redColor) !important;
+
+  .bouncing {
+    animation-name: bouncing_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes bouncing_kf {
+    0% {
+      translate: 0% 3%;
+    }
+
+    50% {
+      translate: 0% -5%;
+    }
+
+    100% {
+      translate: 0% 3%;
+    }
   }
 </style>
 
