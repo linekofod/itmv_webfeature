@@ -1,0 +1,71 @@
+---
+import "../styles/style.css";
+---
+
+<nav>
+  <ul class="dots">
+    <li class="current"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <div class="scroll_btn">
+    <a href="">Scroll ned</a>
+    <a class="arrow down" href=""></a>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+  }
+
+  .dots {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .dots li {
+    height: 20px;
+    width: 20px;
+    background-color: var(--navColor);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .scroll_btn {
+    position: fixed;
+    bottom: 50px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  .scroll_btn a {
+    color: black;
+  }
+  .arrow {
+    border: solid black;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 10px;
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .current {
+    background-color: var(--redColor) !important;
+  }
+</style>
+
+<script></script>

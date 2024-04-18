@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* Farver */
+
+:root {
+    --beigeColor: #F0EEEA;
+    --blueColor: #3D5C6D;
+    --redColor: #EA5230;
+    --navColor: #D2D2D2;
+}
+
+/* Generel styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.full_height {
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, p, a {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+p {
+    font-size: 28px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.beige {
+    background-color: var(--beigeColor);
+}
+.blue {
+    background-color: var(--blueColor);
+}
+
