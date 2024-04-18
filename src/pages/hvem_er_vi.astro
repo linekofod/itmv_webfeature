@@ -4,5 +4,68 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Hvem er vi?" />
-<section class="full_height" id="hvem_er_vi"></section>
+<section class="full_height blue_bg grid_1-1" id="hvem_er_vi1">
+  <img class="tråd2" src="/imgs/tråd2.svg" alt="Rød tråd" />
+  <img src="/imgs/dame.webp" alt="" />
+  <div class="beige_text">
+    <h1>VI ER I TRÅD MED VERDEN</h1>
+    <p>
+      I Tråd Med Verden (ITMV) er en socialøkonomisk virksomhed drevet af
+      foreningen I Tråd Med Verden. I partnerskab med KAB driver vi sy- og
+      design værksteder i udsatte boligområder, hvor vi arbejder med design og
+      genanvendelse af kasserede tekstiler som omdrejningspunkt for at skabe
+      jobmuligheder, netværk og livskvalitet for mennesker, som har mistet
+      fodfæste på arbejdsmarkedet.
+    </p>
+  </div>
+</section>
+<section class="full_height" id="hvem_er_vi2">
+  <img class="tråd3" src="/imgs/tråd3.svg" alt="Rød tråd" />
+  <img class="logo" src="/imgs/logo.svg" alt="Logo af I tråd med verden" />
+  <video src="/videos/test.mp4" autoplay muted loop>
+    Your browser does not support the video tag.</video
+  >
+</section>
 <MainLayout />
+
+<style>
+  section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .tråd2 {
+    position: absolute;
+    right: 10%;
+    z-index: 0;
+    height: 100vh;
+  }
+  .tråd3 {
+    position: absolute;
+    right: 19%;
+    z-index: 0;
+    height: 100vh;
+  }
+  .beige_text {
+    margin: 0 160px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  img {
+    height: 100vh;
+  }
+  video {
+    width: 100%;
+    object-fit: cover;
+    align-self: stretch;
+  }
+  .logo {
+    position: absolute;
+    width: 13%;
+  }
+</style>
