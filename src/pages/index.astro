@@ -4,17 +4,23 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Velkommen" />
-<section class="full_height beige grid_1-1" id="velkommen">
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque ipsum,
-    voluptatem sed maiores, nisi dignissimos, dolor sint numquam porro a non!
-    Assumenda sapiente provident aut quod! Ea, in id!
-  </p>
+<section class="full_height beige_bg grid_1-1" id="velkommen">
+  <div class="text_side">
+    <img class="logo" src="/imgs/logo.svg" alt="Logo af I tråd med verden" />
+    <div class="blue_text">
+      <h1>FRA KRIG TIL <br /> SYERSKE I DANMARK</h1>
+      <p>
+        Se her hvordan vores produkter bliver fremstillet, og hvem menneskerne
+        er bag dit nye gardin.
+      </p>
+    </div>
+  </div>
+  <span class="cirkel"></span>
   <video src="/videos/test.mp4" autoplay muted loop>
     Your browser does not support the video tag.</video
   >
 </section>
-<section class="full_height beige grid_1-1">
+<section class="full_height beige_bg grid_1-1">
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque ipsum,
     voluptatem sed maiores, nisi dignissimos, dolor sint numquam porro a non!
@@ -27,6 +33,39 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout />
 
 <style>
+  section {
+    position: relative;
+  }
+  .cirkel {
+    position: absolute;
+    left: 32%;
+    top: 30%;
+    z-index: 1;
+    height: 340px;
+    width: 340px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      to right,
+      #396eb2,
+      #a6bdd2,
+      #abd1ed,
+      #8da0e4,
+      #ffffff
+    );
+    opacity: 50%;
+  }
+  .text_side {
+    margin: 20px 0 0 20px;
+    position: relative;
+  }
+  .blue_text {
+    margin: 150px 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    z-index: 2;
+  }
   video {
     width: 100%;
     object-fit: cover;

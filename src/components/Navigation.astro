@@ -5,7 +5,7 @@ import "../styles/style.css";
 <nav class="nav">
   <span class="line"></span>
   <div class="nav-item">
-    <a class="nav-link" href="/"></a>
+    <a class="nav-link" id="first-dot" href="/"></a>
     <span class="nav-label">Velkommen</span>
   </div>
   <div class="nav-item">
@@ -124,7 +124,7 @@ import "../styles/style.css";
 
   @keyframes bouncing_kf {
     0% {
-      translate: 0% 3%;
+      translate: 0% 5%;
     }
 
     50% {
@@ -132,9 +132,18 @@ import "../styles/style.css";
     }
 
     100% {
-      translate: 0% 3%;
+      translate: 0% 5%;
     }
   }
 </style>
 
-<script></script>
+<script>
+  const dot = document.querySelector("#first-dot");
+
+  dot.addEventListener("click", redDot);
+
+  function redDot() {
+    console.log("first dot");
+    dot.classList.add("nav-link-selected");
+  }
+</script>
