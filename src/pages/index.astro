@@ -4,18 +4,22 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Velkommen" />
-<section class="full_height grid_1-1 beige">
+<section class="full_height beige grid_1-1">
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque ipsum,
     voluptatem sed maiores, nisi dignissimos, dolor sint numquam porro a non!
     Assumenda sapiente provident aut quod! Ea, in id!
   </p>
-  <img src="" alt="" />
+  <video src="/videos/test.mp4" autoplay muted loop>
+    Your browser does not support the video tag.</video
+  >
 </section>
-<section class="full_height blue">
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem neque ipsum,
-    voluptatem sed maiores, nisi dignissimos, dolor sint numquam porro a non!
-    Assumenda sapiente provident aut quod! Ea, in id!
-  </p>
-</section>
+<MainLayout />
+
+<style>
+  video {
+    width: 100%;
+    object-fit: cover;
+    align-self: stretch;
+  }
+</style>

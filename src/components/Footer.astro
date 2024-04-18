@@ -1,0 +1,135 @@
+---
+import "../styles/style.css";
+---
+
+<section class="grid_1-1-1">
+  <article class="links">
+    <div class="flex_links">
+      <a href="https://www.itmv.dk/pages/om-itmv" target="_blank">Om os</a>
+      <a href="https://www.itmv.dk/collections/all" target="_blank">Shop</a>
+      <a href="https://www.itmv.dk/pages/book-os" target="_blank">Book os</a>
+      <a href="https://www.itmv.dk/pages/samarbejde" target="_blank"
+        >Samarbejde</a
+      >
+      <a href="https://www.itmv.dk/pages/contact" target="_blank">Kontakt</a>
+      <a href="https://www.itmv.dk/pages/presse" target="_blank">Presse</a>
+      <a href="https://www.itmv.dk/policies/refund-policy" target="_blank"
+        >Handelsbetingelser</a
+      >
+      <a href="https://www.itmv.dk/pages/sikker-betaling" target="_blank"
+        >Betaling</a
+      >
+      <a href="https://www.itmv.dk/policies/privacy-policy" target="_blank"
+        >Privatlivspolitik</a
+      >
+    </div>
+    <img src="/imgs/logo.svg" alt="" />
+  </article>
+  <article class="info">
+    <p>Her finder du os:</p>
+    <div class="flex_info">
+      <strong><p>Værkstedet i Lundtoftegade</p></strong>
+      <p>Lundtoftegade 23, 1 sal 2200 København N</p>
+    </div>
+    <div class="flex_info">
+      <strong><p>Værkstedet i Farum Midtpunkt</p></strong>
+      <p>Nygårdterasserne 213A 3520 Farum</p>
+    </div>
+    <div class="flex_info">
+      <p><strong>Mail:</strong> itmv@itmv.dk</p>
+      <p><strong>Telefon:</strong> 60877307</p>
+      <p><strong>CVR:</strong> 34449686</p>
+    </div>
+  </article>
+  <article class="tilmeld">
+    <p>TILMELD NYHEDSBREV</p>
+    <form name="kontakt" method="post" netlify>
+      <label for="E-mail">
+        <input type="email" type="email" />
+      </label>
+      <button>Tilmeld</button>
+    </form>
+  </article>
+
+  <style>
+    section {
+      /* position: fixed;
+    bottom: 0; */
+      height: 550px;
+      position: relative;
+    }
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .links,
+    .info {
+      background-color: var(--beigeColor);
+    }
+    .tilmeld {
+      background-color: var(--blueColor);
+      padding: 120px;
+    }
+    .flex_links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: fit-content;
+      margin: 60px 0 0 70px;
+    }
+    .links img {
+      width: 6%;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 60px 0 0 0;
+    }
+    .info p {
+      font-size: 16px;
+      color: var(--blueColor);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    .tilmed,
+    p,
+    label,
+    button {
+      color: var(--beigeColor);
+    }
+
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--beigeColor);
+      margin-top: 20px;
+      color: var(--beigeColor);
+      width: 100%;
+    }
+    input:focus {
+      outline: none;
+      caret-color: var(--beigeColor);
+      color: var(--beigeColor);
+    }
+    button {
+      width: fit-content;
+      padding: 5px 30px;
+      background-color: transparent;
+      border: 1px solid var(--beigeColor);
+    }
+    button:hover {
+      color: var(--blueColor);
+      background-color: var(--beigeColor);
+      cursor: pointer;
+    }
+  </style>
+</section>

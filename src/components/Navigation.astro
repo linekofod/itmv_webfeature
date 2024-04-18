@@ -4,6 +4,7 @@ import "../styles/style.css";
 
 <nav>
   <ul class="dots">
+    <span class="line"></span>
     <li class="current"></li>
     <li></li>
     <li></li>
@@ -33,6 +34,14 @@ import "../styles/style.css";
     display: flex;
     flex-direction: column;
     gap: 40px;
+    position: relative;
+    align-items: center;
+  }
+  .line {
+    border-left: 2px solid var(--navColor);
+    height: 500px;
+    position: absolute;
+    z-index: -1;
   }
 
   .dots li {
