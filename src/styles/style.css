@@ -20,10 +20,6 @@ html {
     scroll-behavior: smooth;
 }
 
-.full_height {
-    height: 100vh;
-}
-
 img {
     max-width: 100%;
 }
@@ -51,11 +47,6 @@ a:hover {
     opacity: 70%;
 }
 
-.grid_1-1 {
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-}
-
 .beige_bg {
     background-color: var(--beigeColor);
 }
@@ -69,3 +60,23 @@ a:hover {
     color: var(--blueColor);
 }
 
+
+/* Desktop version */
+
+@media screen and (min-width: 800px) {
+    .full_height {
+        height: 100vh;
+    }
+    .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+    }
+}
+
+  /* Mobil version */
+
+  @media screen and (max-width: 600px) {
+    h1 {
+        font-size: 35px;
+    }
+  }

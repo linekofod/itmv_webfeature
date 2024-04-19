@@ -29,15 +29,13 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
   .tråd {
     position: absolute;
-    left: 10%;
-    top: 10%;
-    z-index: 2;
-    height: 90vh;
+    top: 80px;
+    z-index: 1;
   }
   .cirkel {
     position: absolute;
-    left: 32%;
-    top: 30%;
+    top: 40%;
+    left: -30%;
     z-index: 1;
     height: 340px;
     width: 340px;
@@ -53,20 +51,64 @@ import MainLayout from "../layouts/MainLayout.astro";
     opacity: 50%;
   }
   .text_side {
-    margin: 20px 0 0 20px;
+    padding: 20px 0 0 0;
     position: relative;
   }
   .blue_text {
-    margin: 150px 0 0 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     position: relative;
     z-index: 2;
+    color: var(--beigeColor);
+    margin-top: 100%;
+    padding: 0 10px;
   }
   video {
     width: 100%;
     object-fit: cover;
     align-self: stretch;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  .logo {
+    display: none;
+  }
+
+  /* Desktop version */
+
+  @media screen and (min-width: 800px) {
+    .cirkel {
+      left: 32%;
+      top: 30%;
+    }
+    .text_side {
+      padding: 20px 0 0 20px;
+      position: relative;
+    }
+    .tråd {
+      left: 10%;
+      top: 10%;
+      height: 90vh;
+      z-index: 2;
+    }
+    .blue_text {
+      padding: 150px 0 0 30px;
+      color: var(--blueColor);
+      margin: 0;
+    }
+    video {
+      height: auto;
+      position: unset;
+    }
+    .logo {
+      display: block;
+      position: unset;
+      padding: 0;
+      width: auto;
+      z-index: 1;
+    }
   }
 </style>
