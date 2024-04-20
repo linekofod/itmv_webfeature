@@ -1,6 +1,7 @@
 ---
 import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout title="Hjælp verden" />
@@ -16,7 +17,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     <a class="btn" href="https://www.itmv.dk/collections/all" target="_blank"
       >Se mere</a
     >
-    <span class="line"></span>
   </div>
   <div class="img_section">
     <div class="img_text">
@@ -39,9 +39,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     <a class="btn" href="https://www.itmv.dk/pages/donation" target="_blank"
       >Se mere</a
     >
+    <span class="line"></span>
   </div>
 </section>
 <MainLayout />
+<Footer />
 
 <style>
   img {
@@ -84,7 +86,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     height: 100vh;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
   }
   .btn_up {
     opacity: 1;

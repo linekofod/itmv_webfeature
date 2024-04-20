@@ -53,14 +53,8 @@ import "../styles/style.css";
 
   <style>
     section {
-      /* position: fixed;
-    bottom: 0; */
       height: 550px;
       position: relative;
-    }
-    .grid_1-1-1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
     }
     .links,
     .info {
@@ -68,27 +62,26 @@ import "../styles/style.css";
     }
     .tilmeld {
       background-color: var(--blueColor);
-      padding: 120px;
+      padding: 60px;
     }
     .flex_links {
       display: flex;
       flex-direction: column;
       gap: 14px;
       width: fit-content;
-      margin: 60px 0 0 70px;
+      padding: 30px 0 0 40px;
     }
     .links img {
-      width: 6%;
+      width: 15%;
       position: absolute;
-      bottom: 30px;
-      left: 30px;
+      bottom: -120px;
+      right: 30px;
     }
-
     .info {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      padding: 60px 0 0 0;
+      padding: 40px 0 50px 40px;
     }
     .info p {
       font-size: 16px;
@@ -130,6 +123,28 @@ import "../styles/style.css";
       color: var(--blueColor);
       background-color: var(--beigeColor);
       cursor: pointer;
+    }
+
+    /* Desktop version */
+    @media screen and (min-width: 800px) {
+      .grid_1-1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .flex_links {
+        padding: 60px 0 0 70px;
+      }
+      .info {
+        padding: 60px 0 0 0;
+      }
+      .links img {
+        width: 6%;
+        bottom: 30px;
+        left: 30px;
+      }
+      .tilmeld {
+        padding: 100px;
+      }
     }
   </style>
 </section>
