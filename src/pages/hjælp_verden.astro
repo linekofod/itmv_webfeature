@@ -4,5 +4,150 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Hjælp verden" />
-<section class="full_height" id="hjælp_verden"></section>
+<section class="full_height grid_1-1-1" id="gør_en_forskel">
+  <div class="img_section">
+    <div class="img_text">
+      <img
+        src="/imgs/personale.webp"
+        alt="Personalet og ejerne af I tråd med verden"
+      />
+      <h2 class="h2">Køb vores produkter</h2>
+    </div>
+    <a class="btn" href="https://www.itmv.dk/collections/all" target="_blank"
+      >Se mere</a
+    >
+    <span class="line"></span>
+  </div>
+  <div class="img_section">
+    <div class="img_text">
+      <img src="/imgs/gardin.webp" alt="Et gardin" />
+      <h2 class="h2">Kontakt os</h2>
+    </div>
+    <a class="btn" href="https://www.itmv.dk/pages/contact" target="_blank"
+      >Se mere</a
+    >
+    <span class="line"></span>
+  </div>
+  <div class="img_section">
+    <div class="img_text">
+      <img
+        src="/imgs/puder.webp"
+        alt="En masse puder stablet ovenpå hinanden"
+      />
+      <h2 class="h2">Donér til virksomheden</h2>
+    </div>
+    <a class="btn" href="https://www.itmv.dk/pages/donation" target="_blank"
+      >Se mere</a
+    >
+  </div>
+</section>
 <MainLayout />
+
+<style>
+  img {
+    position: relative;
+    height: 100vh;
+    object-fit: cover;
+    align-self: stretch;
+    width: 100%;
+  }
+  .img_section {
+    position: relative;
+    opacity: 100%;
+  }
+  .img_section:hover {
+    opacity: 100%;
+    transition: 0.8s;
+    cursor: pointer;
+  }
+  .h2 {
+    position: absolute;
+    bottom: 20px;
+    padding-left: 20px;
+    color: var(--beigeColor);
+  }
+  .btn {
+    font-size: 18px;
+    background-color: var(--blueColor);
+    color: var(--beigeColor);
+    border: 2px solid var(--beigeColor);
+    padding: 8px 30px;
+    width: fit-content;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 20px;
+    opacity: 0;
+  }
+  .line {
+    display: none;
+    border-left: 2px solid var(--blueColor);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .btn_up {
+    opacity: 1;
+    bottom: 20px;
+    transition: 1s;
+  }
+  .btn_down {
+    opacity: 0;
+    transition: 1s;
+  }
+  .text_up {
+    bottom: 80px;
+    transition: 0.8s;
+  }
+  .text_down {
+    bottom: 20px;
+    transition: 0.8s;
+  }
+  /* Desktop version */
+  @media screen and (min-width: 800px) {
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .line {
+      display: unset;
+    }
+    .img_section {
+      opacity: 70%;
+    }
+  }
+</style>
+
+<script>
+  // Vælger alle .img_section elementer
+  const imgSections = document.querySelectorAll(".img_section");
+
+  // Itererer gennem alle .img_section elementer
+  imgSections.forEach((imgSection) => {
+    const imgText = imgSection.querySelector(".img_text");
+    const btn = imgSection.querySelector(".btn");
+    const text = imgSection.querySelector(".h2");
+
+    // Tilføjer eventlistenere til elementer
+    imgText.addEventListener("mouseover", () => showBtn(btn, text));
+    imgText.addEventListener("mouseout", () => hideBtn(btn, text));
+    btn.addEventListener("mouseover", () => showBtn(btn, text));
+    btn.addEventListener("mouseout", () => hideBtn(btn, text));
+  });
+
+  function showBtn(btn, text) {
+    // Viser knapper og hæver overskriften
+    btn.classList.add("btn_up");
+    btn.classList.remove("btn_down");
+    text.classList.add("text_up");
+    text.classList.remove("text_down");
+  }
+
+  function hideBtn(btn, text) {
+    // Skjuler knappen og sænker overskriften
+    btn.classList.remove("btn_up");
+    btn.classList.add("btn_down");
+    text.classList.remove("text_up");
+    text.classList.add("text_down");
+  }
+</script>
