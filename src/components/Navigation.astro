@@ -5,7 +5,7 @@ import "../styles/style.css";
 <nav class="nav">
   <span class="line"></span>
   <div class="nav-item">
-    <a class="nav-link" id="first-dot" href="/"></a>
+    <a class="nav-link" href="/"></a>
     <span class="nav-label">Velkommen</span>
   </div>
   <div class="nav-item">
@@ -54,6 +54,7 @@ import "../styles/style.css";
     display: flex;
     flex-direction: column;
     gap: 30px;
+    z-index: 5;
   }
   .line {
     border-left: 2px solid var(--navColor);
@@ -92,7 +93,7 @@ import "../styles/style.css";
   .nav-link:hover {
     background-color: var(--redColor);
   }
-  .nav-link-selected {
+  .nav-link.active {
     background-color: var(--redColor);
   }
   .scroll_btn {
@@ -114,7 +115,6 @@ import "../styles/style.css";
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
-
   .bouncing {
     animation-name: bouncing_kf;
     animation-duration: 2s;
@@ -145,13 +145,21 @@ import "../styles/style.css";
   }
 </style>
 
-<script>
-  const dot = document.querySelector("#first-dot");
+<!-- <script>
+  const navLinks = document.querySelectorAll(".nav-link");
 
-  dot.addEventListener("click", redDot);
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
 
-  function redDot() {
-    console.log("first dot");
-    dot.classList.add("nav-link-selected");
-  }
-</script>
+    // Brug `slice` for at fjerne `/` i pathname
+    const currentPath = window.location.pathname.slice("1");
+
+    // `link.href` returnerer en hel url, men vi har kun brug for en sidste del i urlen, der indikerer hvilken side vi er på
+    const hrefArray = link.href.split("/");
+    const thisPath = hrefArray[hrefArray.length - 1];
+
+    if (currentPath === thisPath) {
+      link.classList.add("active");
+    }
+  });
+</script> -->
