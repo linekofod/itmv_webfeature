@@ -4,5 +4,78 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Vidste du?" />
-<section class="full_height blue_bg grid_1-1" id="vidste_du"></section>
+<section class="full_height blue_bg grid_1-1" id="vidste_du">
+  <img class="tråd2" src="/public/imgs/tråd2.svg" alt="Rød tråd" />
+  <img class="pude" src="/imgs/PUDE 1.png" alt="" />
+  <div class="beige_text">
+    <p>
+      Når du køber vores produkter, støtter du kvinder, som står uden for det
+      danske arbejdsmarked. <br />
+      <br />Du får designprodukter, der er med til at fremme dansk produktion,
+      da alle vores produkter laves lokalt i vores værksteder på Nørrebro og
+      Farum.<br />
+
+      <br />Samtidig er du med til at tage ansvar, fordi kasserede tekstiler får
+      nyt liv.
+    </p>
+  </div>
+</section>
 <MainLayout />
+
+<style>
+  .tråd2 {
+    position: absolute;
+    right: 2%;
+    top: 20%;
+    z-index: 0;
+  }
+
+  .beige_text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    justify-content: center;
+  }
+
+  .logo {
+    position: absolute;
+    width: 43%;
+    z-index: 2;
+  }
+
+  /* Desktop version */
+
+  @media screen and (min-width: 800px) {
+    .section1 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+    .tråd2 {
+      right: 10%;
+      top: 0;
+      height: 100vh;
+    }
+
+    .beige_text {
+      padding: 0 160px 0 0;
+    }
+    img {
+      height: 100vh;
+    }
+
+    .pude {
+      height: 80vh;
+      margin-top: 70px;
+    }
+
+    .logo {
+      width: 13%;
+    }
+  }
+</style>
