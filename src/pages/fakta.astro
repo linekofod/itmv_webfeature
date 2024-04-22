@@ -4,139 +4,175 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Fakta" />
-<section class="full_height flexbox" id="fakta">
-    <section>
-        <div class="container">
-            <div class="image-box" >
-              <img class="myImage" src="/imgs/klud.webp" alt="Your Image">
-              <h2>1. OVERSKYDENDE TEKSTIL</h2>
-              <div class="description">Siden 2018 har vores designprocesser på værkstedet taget udgangspunkt i kasserede tekstiler. Vi modtager og genanvender årligt over 2 tons tekstiler fra samarbejdsvirksomheder</div>
-            </div>
-          </div>
-        </section>
-        <div class="divider"></div>
-    
-        <section>
-            <div class="container">
-                <div class="image-box" >
-                  <img class="myImage" src="/imgs/blad.webp" alt="Your Image">
-                  <h2>2. VI FARVER MED PLANTEFARVE</h2>
-                  <div class="description">Plantefarve er blevet en vigtig del af vores design DNA. Det har været en fast teknik til bearbejdning og fornyelse af de kasserede tekstiler siden 2018.</div>
-                </div>
-              </div>
-            </section>
-            <div class="divider"></div>
-    
-            <section>
-                <div class="container">
-                    <div class="image-box">
-                      <img class="myImage" src="/imgs/nål.webp" alt="Your Image">
-                      <h2>3. VI SYER</h2>
-                      <div class="description">De fleste af vores syersker har erfaring med den tekniske del af faget fra tidligere. Dog står de aldrig alene med en proces, der vil altid være en af vores designere tilknyttet. </div>
-                    </div>
-                  </div>
-                </section>
-
+<section class="full_height grid_1-1-1 beige_bg" id="fakta">
+  <div class="img_section">
+    <div class="img_text">
+      <img
+        class="myImage"
+        id="tekstil"
+        src="/imgs/klud.webp"
+        alt="Your Image"
+      />
+      <h2 class="h2">1. Overskydende tekstil</h2>
+    </div>
+    <div class="description">
+      Siden 2018 har vores designprocesser på værkstedet taget udgangspunkt i
+      kasserede tekstiler. Vi modtager og genanvender årligt over 2 tons
+      tekstiler fra samarbejdsvirksomheder.
+    </div>
+    <span class="line"></span>
+  </div>
+  <div class="img_section">
+    <div class="img_text">
+      <img class="myImage" src="/imgs/blad.webp" alt="Your Image" />
+      <h2 class="h2">2. Vi farver med plantefarve</h2>
+    </div>
+    <div class="description">
+      Plantefarve er blevet en vigtig del af vores design DNA. <br />Det har
+      været en fast teknik til bearbejdning og fornyelse af de kasserede
+      tekstiler siden 2018.
+    </div>
+    <span class="line"></span>
+  </div>
+  <div class="img_section">
+    <div class="img_text">
+      <img class="myImage" src="/imgs/nål.webp" alt="Your Image" />
+      <h2 class="h2">3. Vi syer</h2>
+    </div>
+    <div class="description">
+      De fleste af vores syersker har erfaring med den tekniske del af faget fra
+      tidligere. <br />Dog står de aldrig alene med en proces, der vil altid
+      være en af vores designere tilknyttet.
+    </div>
+    <span class="line"></span>
+  </div>
 </section>
 <MainLayout />
 
 <style>
-     body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-color: var(--beigeColor);
-    display: flex;
-    flex-direction: row;
-  }
-
-  .container {
-    text-align: center;
-  }
-
-  h2 {
-    margin-bottom: 10px;
-    color: var(--blueColor);
-    margin-top: calc(20% + 10px);
-
-  }
-  .image-box {
+  img {
     position: relative;
-    display: inline-block;
-    cursor: pointer;
+    object-fit: cover;
+    align-self: stretch;
+    width: 100%;
   }
-
-  img{
-  margin-top: 10em;
-}
-
-  .image-box img {
-    width: 80%;
-    height: 10px;
-    height: auto;
-    transition: transform 0.3s ease;
+  .img_section {
+    position: relative;
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
   }
-  .image-box img:hover {
-    opacity: 80%;
-  }
-  .description {
-    display: none;
-    position: absolute;
-    top: calc(100% + 10px);
-    left: 50%;
-    width: 80%;
-    transform: translateX(-50%);
-    border: 2px solid var(--blueColor);
-    color: #3D5C6D;
-    padding: 10px 20px;
-    border-radius: 1px;
-  }
-
-    @media screen and (min-width: 800px) {
-      .flexbox{
+  .img_text {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-
-
-.divider {
-        width: 6px;
-        height: 100vh;
-        margin-right: 3%;
-        margin-left: 3%;
-        background-color:var(--blueColor);
+  }
+  .myImage {
+    width: 60%;
+    height: 10px;
+    height: auto;
+  }
+  #tekstil {
+    width: 75%;
+  }
+  .myImage:hover {
+    opacity: 80%;
+  }
+  .h2 {
+    position: absolute;
+    bottom: 20px;
+    color: var(--blueColor);
+    left: 20px;
+  }
+  .description {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: var(--blueColor);
+    border: 2px solid var(--blueColor);
+    padding: 10px 20px;
+    width: 80%;
+    height: 120px;
+    position: absolute;
+    margin: 0 20px;
+    bottom: 0px;
+    opacity: 0;
+    /* text-align: center; */
+  }
+  .line {
+    display: none;
+    border-left: 5px solid var(--blueColor);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .description_up {
+    opacity: 1;
+    bottom: 20px;
+    transition: 0.5s;
+  }
+  .description_down {
+    opacity: 0;
+    transition: 0.1s;
+  }
+  .h2_up {
+    bottom: 160px;
+    transition: 0.8s;
+  }
+  .h2_down {
+    bottom: 20px;
+    transition: 0.8s;
+  }
+  /* Desktop version */
+  @media screen and (min-width: 800px) {
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
+    .line {
+      display: unset;
     }
+  }
 </style>
 
 <script>
-function showDescription(clickedImage) {
-  // finder"parent container" af billedet
-  var container = clickedImage.parentNode;
-  // Finder beskrivelsen for elementet i samme container
-  var description = container.querySelector('.description');
+  // Vælger alle .img_section elementer
+  const imgSections = document.querySelectorAll(".img_section");
 
-  // Skift visningen af beskrivelsen
-  if (description.style.display === 'none' || description.style.display === '') {
-    description.style.display = 'block';
-  } else {
-    description.style.display = 'none';
-  }
-}
+  // Itererer gennem alle .img_section elementer
+  imgSections.forEach((imgSection) => {
+    const imgText = imgSection.querySelector(".img_text");
+    const description = imgSection.querySelector(".description");
+    const h2 = imgSection.querySelector(".h2");
 
-// tilføjer "click" event til alle billeder
-// finder alle elements med class 'myImage'
-var images = document.getElementsByClassName('myImage');
-
-// gå gennem hvert billedelement
-for (var i = 0; i < images.length; i++) {
-  // tilføjer click event listener til hvert billede 
-  images[i].addEventListener('click', function() {
-    //kalder showDescription-funktionen
-    showDescription(this);
+    // Tilføjer eventlistenere til elementer
+    imgText.addEventListener("mouseover", () =>
+      showDescription(description, h2)
+    );
+    imgText.addEventListener("mouseout", () =>
+      hideDescription(description, h2)
+    );
+    description.addEventListener("mouseover", () =>
+      showDescription(description, h2)
+    );
+    description.addEventListener("mouseout", () =>
+      hideDescription(description, h2)
+    );
   });
-}
 
+  function showDescription(description, h2) {
+    // Viser description og hæver overskriften
+    description.classList.add("description_up");
+    description.classList.remove("description_down");
+    h2.classList.add("h2_up");
+    h2.classList.remove("h2_down");
+  }
+
+  function hideDescription(description, h2) {
+    // Skjuler description og sænker overskriften
+    description.classList.remove("description_up");
+    description.classList.add("description_down");
+    h2.classList.remove("h2_up");
+    h2.classList.add("h2_down");
+  }
 </script>
