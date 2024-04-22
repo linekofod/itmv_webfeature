@@ -5,7 +5,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Fakta" />
 <section class="full_height flexbox" id="fakta">
-    <section class="flexbox">
+    <section>
         <div class="container">
             <div class="image-box" >
               <img class="myImage" src="/imgs/klud.webp" alt="Your Image">
@@ -16,7 +16,7 @@ import MainLayout from "../layouts/MainLayout.astro";
         </section>
         <div class="divider"></div>
     
-        <section class="flexbox">
+        <section>
             <div class="container">
                 <div class="image-box" >
                   <img class="myImage" src="/imgs/blad.webp" alt="Your Image">
@@ -27,7 +27,7 @@ import MainLayout from "../layouts/MainLayout.astro";
             </section>
             <div class="divider"></div>
     
-            <section class="flexbox">
+            <section>
                 <div class="container">
                     <div class="image-box">
                       <img class="myImage" src="/imgs/nål.webp" alt="Your Image">
@@ -50,12 +50,6 @@ import MainLayout from "../layouts/MainLayout.astro";
     flex-direction: row;
   }
 
-.flexbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
   .container {
     text-align: center;
   }
@@ -71,10 +65,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     display: inline-block;
     cursor: pointer;
   }
+
+  img{
+  margin-top: 10em;
+}
+
   .image-box img {
     width: 80%;
-/*     margin-bottom: calc(60% + 2px);
- */    height: 10px;
+    height: 10px;
     height: auto;
     transition: transform 0.3s ease;
   }
@@ -89,21 +87,27 @@ import MainLayout from "../layouts/MainLayout.astro";
     width: 80%;
     transform: translateX(-50%);
     border: 2px solid var(--blueColor);
-;
     color: #3D5C6D;
     padding: 10px 20px;
     border-radius: 1px;
   }
 
-/*   .image-box.clicked .description {
-    display: block;
-  } */
-  .divider {
+    @media screen and (min-width: 800px) {
+      .flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.divider {
         width: 6px;
         height: 100vh;
         margin-right: 3%;
         margin-left: 3%;
         background-color:var(--blueColor);
+    }
     }
 </style>
 
