@@ -4,5 +4,139 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Fakta" />
-<section class="full_height" id="fakta"></section>
+<section class="full_height flexbox" id="fakta">
+    <section>
+        <div class="container">
+            <div class="image-box" >
+              <img class="myImage" src="/imgs/klud.webp" alt="Your Image">
+              <h2>1. OVERSKYDENDE TEKSTIL</h2>
+              <div class="description">Siden 2018 har vores designprocesser på værkstedet taget udgangspunkt i kasserede tekstiler. Vi modtager og genanvender årligt over 2 tons tekstiler fra samarbejdsvirksomheder</div>
+            </div>
+          </div>
+        </section>
+        <div class="divider"></div>
+    
+        <section>
+            <div class="container">
+                <div class="image-box" >
+                  <img class="myImage" src="/imgs/blad.webp" alt="Your Image">
+                  <h2>2. VI FARVER MED PLANTEFARVE</h2>
+                  <div class="description">Plantefarve er blevet en vigtig del af vores design DNA. Det har været en fast teknik til bearbejdning og fornyelse af de kasserede tekstiler siden 2018.</div>
+                </div>
+              </div>
+            </section>
+            <div class="divider"></div>
+    
+            <section>
+                <div class="container">
+                    <div class="image-box">
+                      <img class="myImage" src="/imgs/nål.webp" alt="Your Image">
+                      <h2>3. VI SYER</h2>
+                      <div class="description">De fleste af vores syersker har erfaring med den tekniske del af faget fra tidligere. Dog står de aldrig alene med en proces, der vil altid være en af vores designere tilknyttet. </div>
+                    </div>
+                  </div>
+                </section>
+
+</section>
 <MainLayout />
+
+<style>
+     body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--beigeColor);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    color: var(--blueColor);
+    margin-top: calc(20% + 10px);
+
+  }
+  .image-box {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  img{
+  margin-top: 10em;
+}
+
+  .image-box img {
+    width: 80%;
+    height: 10px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  .image-box img:hover {
+    opacity: 80%;
+  }
+  .description {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    width: 80%;
+    transform: translateX(-50%);
+    border: 2px solid var(--blueColor);
+    color: #3D5C6D;
+    padding: 10px 20px;
+    border-radius: 1px;
+  }
+
+    @media screen and (min-width: 800px) {
+      .flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.divider {
+        width: 6px;
+        height: 100vh;
+        margin-right: 3%;
+        margin-left: 3%;
+        background-color:var(--blueColor);
+    }
+    }
+</style>
+
+<script>
+function showDescription(clickedImage) {
+  // finder"parent container" af billedet
+  var container = clickedImage.parentNode;
+  // Finder beskrivelsen for elementet i samme container
+  var description = container.querySelector('.description');
+
+  // Skift visningen af beskrivelsen
+  if (description.style.display === 'none' || description.style.display === '') {
+    description.style.display = 'block';
+  } else {
+    description.style.display = 'none';
+  }
+}
+
+// tilføjer "click" event til alle billeder
+// finder alle elements med class 'myImage'
+var images = document.getElementsByClassName('myImage');
+
+// gå gennem hvert billedelement
+for (var i = 0; i < images.length; i++) {
+  // tilføjer click event listener til hvert billede 
+  images[i].addEventListener('click', function() {
+    //kalder showDescription-funktionen
+    showDescription(this);
+  });
+}
+
+</script>
