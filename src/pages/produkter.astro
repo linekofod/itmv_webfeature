@@ -3,6 +3,81 @@ import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Produkter" />
-<section class="full_height blue_bg grid_1-1" id="produkter"></section>
+<MainLayout title="Hvem er vi?" />
+<section class="section full_height blue_bg grid_1-1" id="hvem_er_vi1">
+  <img class="tråd" src="/public/imgs/tråd2.svg" alt="Rød tråd" />
+  <img src="/imgs/værelse.webp" alt="" />
+  <div class="beige_text">
+    <h1>Vi tager ansvar</h1>
+    <div class="text">
+      <p>
+        Siden 2018 har vi været registreret som en socialøkonomisk virksomhed,
+        der beskæftiger udsatte kvinder i Danmark.
+      </p>
+      <p>
+        Vi bidrager til et rummeligt arbejdsmarked ved at ansætte kvinder i
+        ordinær beskæftigelse med fokus på kvindernes kompetencer og ressourcer,
+        som skal sættes i spil på det danske arbejdsmarked.
+      </p>
+      <p>
+        Vi tror på, at mennesker bliver gladere og stærkere af at arbejde med
+        noget de brænder for. Desuden ønsker vi at bidrage til den grønne
+        omstilling ved at skabe en cirkulær produktion, hvor kasserede tekstiler
+        kan få nyt liv i stedet for at ende på forbrændingen.
+      </p>
+    </div>
+  </div>
+</section>
 <MainLayout />
+
+<style>
+  .section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .tråd {
+    position: absolute;
+    right: 2%;
+    top: 20%;
+    z-index: 0;
+  }
+  .beige_text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Desktop version */
+
+  @media screen and (min-width: 800px) {
+    .section {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+    .tråd {
+      right: 10%;
+      top: 0;
+      height: 100vh;
+    }
+    .beige_text {
+      padding: 0 160px 0 0;
+    }
+    img {
+      height: 100vh;
+    }
+  }
+</style>
