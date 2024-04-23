@@ -5,41 +5,41 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Fakta" />
 <section class="full_height grid_1-1-1 beige_bg" id="fakta">
-  <div class="img_section">
-    <div class="img_text">
+  <div class="img_section_fakta">
+    <div class="img_text_fakta">
       <img
-        class="myImage"
+        class="myImageFakta"
         id="tekstil"
         src="/imgs/klud.webp"
         alt="Your Image"
       />
-      <h2 class="h2">1. Overskydende tekstil</h2>
+      <h2 class="h2_fakta">1. Overskydende tekstil</h2>
     </div>
-    <div class="description">
+    <div class="description_fakta">
       Siden 2018 har vores designprocesser på værkstedet taget udgangspunkt i
       kasserede tekstiler. Vi modtager og genanvender årligt over 2 tons
       tekstiler fra samarbejdsvirksomheder.
     </div>
-    <span class="line"></span>
+    <span class="line_fakta"></span>
   </div>
-  <div class="img_section">
-    <div class="img_text">
-      <img class="myImage" src="/imgs/blad.webp" alt="Your Image" />
-      <h2 class="h2">2. Vi farver med plantefarve</h2>
+  <div class="img_section_fakta">
+    <div class="img_text_fakta">
+      <img class="myImageFakta" src="/imgs/blad.webp" alt="Your Image" />
+      <h2 class="h2_fakta">2. Vi farver med plantefarve</h2>
     </div>
-    <div class="description">
+    <div class="description_fakta">
       Plantefarve er blevet en vigtig del af vores design DNA. <br />Det har
       været en fast teknik til bearbejdning og fornyelse af de kasserede
       tekstiler siden 2018.
     </div>
-    <span class="line"></span>
+    <span class="line_fakta"></span>
   </div>
-  <div class="img_section">
-    <div class="img_text">
-      <img class="myImage" src="/imgs/nål.webp" alt="Your Image" />
-      <h2 class="h2">3. Vi syer</h2>
+  <div class="img_section_fakta">
+    <div class="img_text_fakta">
+      <img class="myImageFakta" src="/imgs/nål.webp" alt="Your Image" />
+      <h2 class="h2_fakta">3. Vi syer</h2>
     </div>
-    <div class="description">
+    <div class="description_fakta">
       De fleste af vores syersker har erfaring med den tekniske del af faget fra
       tidligere. <br />Dog står de aldrig alene med en proces, der vil altid
       være en af vores designere tilknyttet.
@@ -49,24 +49,24 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout />
 
 <style>
-  img {
+  .myImageFakta {
     position: relative;
     object-fit: cover;
     align-self: stretch;
     width: 100%;
   }
-  .img_section {
+  .img_section_fakta {
     position: relative;
     opacity: 100%;
     display: flex;
     align-items: center;
     height: 100vh;
   }
-  .img_text {
+  .img_text_fakta {
     display: flex;
     justify-content: center;
   }
-  .myImage {
+  .myImageFakta {
     width: 60%;
     height: 10px;
     height: auto;
@@ -74,16 +74,16 @@ import MainLayout from "../layouts/MainLayout.astro";
   #tekstil {
     width: 75%;
   }
-  .myImage:hover {
+  .myImageFakta:hover {
     opacity: 80%;
   }
-  .h2 {
+  .h2_fakta {
     position: absolute;
     bottom: 20px;
     color: var(--blueColor);
     left: 20px;
   }
-  .description {
+  .description_fakta {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 15px;
     color: var(--blueColor);
@@ -95,30 +95,24 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin: 0 20px;
     bottom: 0px;
     opacity: 0;
-    /* text-align: center; */
   }
-  .line {
+  .line_fakta {
     display: none;
-    border-left: 5px solid var(--blueColor);
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
   }
-  .description_up {
+  .description_up_fakta {
     opacity: 1;
     bottom: 20px;
     transition: 0.5s;
   }
-  .description_down {
+  .description_down_fakta {
     opacity: 0;
     transition: 0.1s;
   }
-  .h2_up {
+  .h2_up_fakta {
     bottom: 160px;
     transition: 0.8s;
   }
-  .h2_down {
+  .h2_down_fakta {
     bottom: 20px;
     transition: 0.8s;
   }
@@ -128,50 +122,55 @@ import MainLayout from "../layouts/MainLayout.astro";
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
-    .line {
+    .line_fakta {
       display: unset;
+      border-left: 5px solid var(--blueColor);
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 </style>
 
 <script>
   // Vælger alle .img_section elementer
-  const imgSections = document.querySelectorAll(".img_section");
+  const imgSectionsFakta = document.querySelectorAll(".img_section_fakta");
 
   // Itererer gennem alle .img_section elementer
-  imgSections.forEach((imgSection) => {
-    const imgText = imgSection.querySelector(".img_text");
-    const description = imgSection.querySelector(".description");
-    const h2 = imgSection.querySelector(".h2");
+  imgSectionsFakta.forEach((imgSection) => {
+    const imgTextFakta = imgSection.querySelector(".img_text_fakta");
+    const descriptionFakta = imgSection.querySelector(".description_fakta");
+    const h2Fakta = imgSection.querySelector(".h2_fakta");
 
     // Tilføjer eventlistenere til elementer
-    imgText.addEventListener("mouseover", () =>
-      showDescription(description, h2)
+    imgTextFakta.addEventListener("mouseover", () =>
+      showDescription(descriptionFakta, h2Fakta)
     );
-    imgText.addEventListener("mouseout", () =>
-      hideDescription(description, h2)
+    imgTextFakta.addEventListener("mouseout", () =>
+      hideDescription(descriptionFakta, h2Fakta)
     );
-    description.addEventListener("mouseover", () =>
-      showDescription(description, h2)
+    descriptionFakta.addEventListener("mouseover", () =>
+      showDescription(descriptionFakta, h2Fakta)
     );
-    description.addEventListener("mouseout", () =>
-      hideDescription(description, h2)
+    descriptionFakta.addEventListener("mouseout", () =>
+      hideDescription(descriptionFakta, h2Fakta)
     );
   });
 
-  function showDescription(description, h2) {
+  function showDescription(descriptionFakta, h2Fakta) {
     // Viser description og hæver overskriften
-    description.classList.add("description_up");
-    description.classList.remove("description_down");
-    h2.classList.add("h2_up");
-    h2.classList.remove("h2_down");
+    descriptionFakta.classList.add("description_up_fakta");
+    descriptionFakta.classList.remove("description_down_fakta");
+    h2Fakta.classList.add("h2_up_fakta");
+    h2Fakta.classList.remove("h2_down_fakta");
   }
 
-  function hideDescription(description, h2) {
+  function hideDescription(descriptionFakta, h2Fakta) {
     // Skjuler description og sænker overskriften
-    description.classList.remove("description_up");
-    description.classList.add("description_down");
-    h2.classList.remove("h2_up");
-    h2.classList.add("h2_down");
+    descriptionFakta.classList.remove("description_up_fakta");
+    descriptionFakta.classList.add("description_down_fakta");
+    h2Fakta.classList.remove("h2_up_fakta");
+    h2Fakta.classList.add("h2_down_fakta");
   }
 </script>

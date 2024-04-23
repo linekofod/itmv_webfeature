@@ -4,8 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Hvem er vi?" />
-<section class="section1 full_height blue_bg grid_1-1" id="hvem_er_vi1">
-  <img class="tråd2" src="/public/imgs/tråd2.svg" alt="Rød tråd" />
+<section class="full_height blue_bg grid_1-1" id="hvem_er_vi1">
   <img src="/imgs/dame.webp" alt="" />
   <div class="beige_text">
     <h1>Vi er i tråd med verden</h1>
@@ -19,11 +18,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     </p>
   </div>
 </section>
-<section class="section2 full_height" id="hvem_er_vi2">
+<section class="full_height" id="hvem_er_vi2">
   <div class="video_container">
     <div>
       <iframe
-        src="https://www.youtube.com/embed/HexL-TPhk-Y?si=9kT1018rxbtZZ319"
+        src="https://www.youtube.com/embed/HexL-TPhk-Y?si=2C5LoCjlsbZEaD-M"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -31,36 +30,61 @@ import MainLayout from "../layouts/MainLayout.astro";
         allowfullscreen></iframe>
     </div>
   </div>
-  <MainLayout />
+</section>
+<MainLayout />
 
-  <style>
-    .section2 {
+<style>
+  #hvem_er_vi2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--beigeColor);
+  }
+  #hvem_er_vi1 .beige_text {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  #hvem_er_vi2 .video_container {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #hvem_er_vi2 iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Desktop version */
+
+  @media screen and (min-width: 800px) {
+    #hvem_er_vi1 {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: var(--beigeColor);
+      gap: 50px;
     }
-    .tråd2 {
-      position: absolute;
-      right: 2%;
-      top: 20%;
-      z-index: 0;
+    #hvem_er_vi1 .beige_text {
+      padding: 0 160px 0 0;
     }
-    .beige_text {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      position: relative;
-      z-index: 2;
+    #hvem_er_vi1 img {
+      height: 100vh;
     }
-    .video_container {
+    #hvem_er_vi2 .video_container {
       width: 100vw;
       height: 100vh;
     }
 
-    iframe {
+    #hvem_er_vi2 iframe {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -68,41 +92,5 @@ import MainLayout from "../layouts/MainLayout.astro";
       height: 100vh;
       transform: translate(-50%, -50%);
     }
-
-    /* Desktop version */
-
-    @media screen and (min-width: 800px) {
-      .section1 {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
-      }
-      .tråd2 {
-        right: 10%;
-        top: 0;
-        height: 100vh;
-      }
-      .beige_text {
-        padding: 0 160px 0 0;
-      }
-      img {
-        height: 100vh;
-      }
-      .video_container {
-        width: 100vw;
-        height: 100vh;
-      }
-
-      iframe {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100vw;
-        height: 100vh;
-        transform: translate(-50%, -50%);
-      }
-    }
-  </style>
-</section>
+  }
+</style>

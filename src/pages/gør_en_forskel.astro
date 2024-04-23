@@ -40,7 +40,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout />
 
 <style>
-  img {
+  #gør_en_forskel img {
     position: relative;
     height: 100vh;
     object-fit: cover;
@@ -54,7 +54,6 @@ import MainLayout from "../layouts/MainLayout.astro";
   .img_section:hover {
     opacity: 100%;
     transition: 0.8s;
-    cursor: pointer;
   }
   .h2 {
     position: absolute;
@@ -73,6 +72,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin-left: 20px;
     opacity: 0;
   }
+  .btn:hover {
+    color: var(--blueColor);
+    background-color: var(--beigeColor);
+    transition: 0.1s;
+  }
   .line {
     display: none;
     border-left: 2px solid var(--blueColor);
@@ -84,7 +88,7 @@ import MainLayout from "../layouts/MainLayout.astro";
   .btn_up {
     opacity: 1;
     bottom: 20px;
-    transition: 1s;
+    transition: 0.5s;
   }
   .btn_down {
     opacity: 0;

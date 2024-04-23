@@ -5,8 +5,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Vidste du?" />
 <section class="full_height blue_bg grid_1-1" id="vidste_du">
-  <img class="tråd2" src="/public/imgs/tråd2.svg" alt="Rød tråd" />
-  <img class="pude" src="/imgs/PUDE1.png" alt="Hænder der holder en pude" />
+  <img class="pude" src="/imgs/pude.webp" alt="Hænder der holder en pude" />
   <div class="beige_text">
     <span class="cirkel"></span>
     <div class="text">
@@ -27,17 +26,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout />
 
 <style>
-  section {
+  #vidste_du {
     height: 100vh;
   }
-  .tråd2 {
-    /* position: absolute;
-    right: 2%;
-    top: 20%;
-    z-index: 0; */
-    display: none;
-  }
-  .beige_text {
+  #vidste_du .beige_text {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -47,15 +39,15 @@ import MainLayout from "../layouts/MainLayout.astro";
     align-items: center;
     position: relative;
   }
-  .cirkel {
+  #vidste_du .cirkel {
     display: none;
   }
-  .text {
+  #vidste_du .text {
     position: absolute;
     padding: 20px;
     top: 50px;
   }
-  .pude {
+  #vidste_du .pude {
     position: relative;
     top: 50px;
   }
@@ -63,16 +55,10 @@ import MainLayout from "../layouts/MainLayout.astro";
   /* Desktop version */
 
   @media screen and (min-width: 800px) {
-    .tråd2 {
-      right: 10%;
-      top: 0;
-      height: 100vh;
-    }
-
-    .beige_text {
+    #vidste_du .beige_text {
       padding: 0 160px 0 0;
     }
-    .cirkel {
+    #vidste_du .cirkel {
       display: block;
       position: absolute;
       top: 25%;
@@ -88,13 +74,13 @@ import MainLayout from "../layouts/MainLayout.astro";
         #d5cdcc
       );
     }
-    .text {
+    #vidste_du .text {
       position: relative;
     }
-    img {
+    #vidste_du img {
       height: 100vh;
     }
-    .pude {
+    #vidste_du .pude {
       height: 80vh;
       margin-top: 70px;
     }

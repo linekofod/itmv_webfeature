@@ -3,9 +3,8 @@ import "../styles/style.css";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout title="Hvem er vi?" />
-<section class="section full_height blue_bg grid_1-1" id="hvem_er_vi1">
-  <img class="tråd" src="/public/imgs/tråd2.svg" alt="Rød tråd" />
+<MainLayout title="Produkter" />
+<section class="full_height blue_bg grid_1-1" id="produkter">
   <img src="/imgs/værelse.webp" alt="" />
   <div class="beige_text">
     <h1>Vi tager ansvar</h1>
@@ -31,16 +30,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout />
 
 <style>
-  .section {
+  #produkter {
     position: relative;
   }
-  .tråd {
-    position: absolute;
-    right: 2%;
-    top: 0;
-    z-index: 0;
-  }
-  .beige_text {
+  #produkter .beige_text {
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -48,7 +41,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     position: relative;
     z-index: 2;
   }
-  .text {
+  #produkter .text {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -57,20 +50,16 @@ import MainLayout from "../layouts/MainLayout.astro";
   /* Desktop version */
 
   @media screen and (min-width: 800px) {
-    .section {
+    #produkter {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 50px;
     }
-    .tråd {
-      right: 10%;
-      height: 100vh;
-    }
-    .beige_text {
+    #produkter .beige_text {
       padding: 0 160px 0 0;
     }
-    img {
+    #produkter img {
       height: 100vh;
     }
   }
