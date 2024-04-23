@@ -10,19 +10,19 @@ import "../styles/style.css";
   </div>
   <nav>
     <ul class="menu">
-      <li><a href="/">Velkommen</a></li>
-      <li><a href="/hvem_er_vi">Hvem er vi?</a></li>
-      <li><a href="/fakta">Fakta</a></li>
-      <li><a href="/produkter">Produkter</a></li>
-      <li><a href="/tag_ansvar">Tag ansvar</a></li>
-      <li><a href="/gør_en_forskel">Gør en forskel</a></li>
-      <li><a href="/vidste_du">Vidste du?</a></li>
-      <li><a href="/hjælp_verden">Hjælp verden</a></li>
+      <li><a href="#velkommen">Velkommen</a></li>
+      <li><a href="#hvem_er_vi1">Hvem er vi?</a></li>
+      <li><a href="#fakta">Fakta</a></li>
+      <li><a href="#produkter">Produkter</a></li>
+      <li><a href="#tag_ansvar">Tag ansvar</a></li>
+      <li><a href="#gør_en_forskel">Gør en forskel</a></li>
+      <li><a href="#vidste_du">Vidste du?</a></li>
+      <li><a href="#hjælp_verden">Hjælp verden</a></li>
     </ul>
     <div class="burger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
   </nav>
 </header>
@@ -80,7 +80,7 @@ import "../styles/style.css";
     cursor: pointer;
   }
 
-  .burger .line {
+  .burger .bar {
     width: 100%;
     height: 2px;
     background-color: var(--blueColor);
@@ -91,6 +91,7 @@ import "../styles/style.css";
     display: none;
   }
 
+  /* Mobil version */
   @media screen and (max-width: 800px) {
     .menu {
       display: none;
@@ -98,17 +99,17 @@ import "../styles/style.css";
     .burger {
       display: block;
     }
-    .burger.active .line:nth-child(1) {
+    .burger.active .bar:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
       transition: 0.2s linear;
     }
 
-    .burger.active .line:nth-child(2) {
+    .burger.active .bar:nth-child(2) {
       opacity: 0;
       transition: 0.15s linear;
     }
 
-    .burger.active .line:nth-child(3) {
+    .burger.active .bar:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
       transition: 0.2s linear;
     }
