@@ -159,6 +159,7 @@ a:hover {
     object-fit: cover;
     align-self: stretch;
     width: 100%;
+    z-index: 100;
   }
   .img_section_fakta {
     position: relative;
