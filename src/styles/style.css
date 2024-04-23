@@ -78,6 +78,9 @@ a:hover {
   }
 
   /* Velkommen */
+  .tråd_velkommen {
+    display: none;
+  }
   #velkommen {
     position: relative;
     height: 100vh;
@@ -128,6 +131,9 @@ a:hover {
   }
 
   /* Hvem er vi? */
+  .tråd_hvem {
+    display: none;
+  }
   #hvem_er_vi2 {
     position: relative;
     background-color: var(--beigeColor);
@@ -224,6 +230,9 @@ a:hover {
   }
 
   /* Produkter */
+  .tråd_produkter {
+    display: none;
+  }
   #produkter {
     position: relative;
   }
@@ -242,6 +251,9 @@ a:hover {
   }
 
   /* Tag ansvar */
+  .tråd_ansvar {
+    display: none;
+  }
   #tag_ansvar .blue_text {
     padding: 30px;
     display: flex;
@@ -321,6 +333,9 @@ a:hover {
   }
 
   /* Vidste du? */
+  .tråd_vidste {
+    display: none;
+  }
   #vidste_du {
     height: 100vh;
   }
@@ -462,6 +477,14 @@ a:hover {
       }
   
       /* Velkommen */
+      .tråd_velkommen {
+        display: block;
+        position: absolute;
+        height: 86.5vh;
+        z-index: 1;
+        top: 111px;
+        left: 139px;
+      }
       #velkommen .cirkel {
         left: 32%;
         top: 30%;
@@ -489,6 +512,14 @@ a:hover {
       /* Hvem er vi? */
       #hvem_er_vi1 {
         position: relative;
+      }
+      .tråd_hvem {
+        display: block;
+        position: absolute;
+        height: 100vh !important;
+        z-index: 1;
+        top: 0;
+        right: 365px;
       }
       #hvem_er_vi1 .beige_text {
         margin-top: 250px;
@@ -528,6 +559,14 @@ a:hover {
       #produkter {
         position: relative;
       }
+      .tråd_produkter {
+        display: block;
+        position: absolute;
+        height: 100vh !important;
+        z-index: 1;
+        top: 0;
+        right: 365px;
+      }
       #produkter .beige_text {
         margin-top: 200px;
         padding: 0;
@@ -539,6 +578,14 @@ a:hover {
       /* Tag ansvar */
       #tag_ansvar {
         position: relative;
+      }
+      .tråd_ansvar {
+        display: block;
+        position: absolute;
+        height: 100vh !important;
+        z-index: 1;
+        top: 0;
+        right: 408px;
       }
       #tag_ansvar .blue_text {
         margin-top: 200px;
@@ -561,6 +608,17 @@ a:hover {
       }
   
       /* Vidste du? */
+      #vidste_du {
+        position: relative;
+      }
+      .tråd_vidste {
+        display: block;
+        position: absolute;
+        height: 100vh !important;
+        z-index: 2;
+        top: 0;
+        left: 300px;
+      }
       #vidste_du .beige_text {
         padding: 0 160px 0 0;
       }
