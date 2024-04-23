@@ -45,106 +45,140 @@ import "../styles/style.css";
     <p>TILMELD NYHEDSBREV</p>
     <form name="kontakt" method="post" netlify>
       <label for="E-mail">
-        <input type="email" type="email" />
+        <input type="email" />
       </label>
       <button>Tilmeld</button>
     </form>
+    <div class="scroll_btn">
+      <a href="">Scroll up</a>
+      <a class="arrow up" href="#velkommen"></a>
+    </div>
   </article>
+</section>
 
-  <style>
+<style>
+  section {
+    display: none;
+  }
+  .links,
+  .info {
+    background-color: var(--beigeColor);
+  }
+  .tilmeld {
+    padding: 60px;
+    background-color: var(--blueColor);
+  }
+  .flex_links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: fit-content;
+    padding: 30px 0 0 40px;
+  }
+  .links img {
+    width: 15%;
+    position: absolute;
+    bottom: -120px;
+    right: 30px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 0 50px 40px;
+  }
+  .info p {
+    font-size: 16px;
+    color: var(--blueColor);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .tilmeld,
+  p,
+  label,
+  button {
+    color: var(--beigeColor);
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--beigeColor);
+    margin-top: 20px;
+    color: var(--beigeColor);
+    width: 100%;
+  }
+  input:focus {
+    outline: none;
+    caret-color: var(--beigeColor);
+    color: var(--beigeColor);
+  }
+  button {
+    width: fit-content;
+    padding: 5px 30px;
+    background-color: transparent;
+    border: 1px solid var(--beigeColor);
+  }
+  button:hover {
+    color: var(--blueColor);
+    background-color: var(--beigeColor);
+    cursor: pointer;
+  }
+
+  /* Scroll up btn */
+  .scroll_btn {
+    position: absolute;
+    z-index: 100;
+    bottom: 30px;
+    right: 20px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+  .scroll_btn a {
+    color: var(--beigeColor);
+    cursor: default;
+  }
+  .arrow {
+    border: solid var(--beigeColor);
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 9px;
+  }
+  .up {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  /* Desktop version */
+  @media screen and (min-width: 800px) {
     section {
       height: 550px;
-      position: relative;
+      position: absolute;
+      width: 100%;
+      display: unset;
     }
-    .links,
-    .info {
-      background-color: var(--beigeColor);
-    }
-    .tilmeld {
-      background-color: var(--blueColor);
-      padding: 60px;
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
     }
     .flex_links {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      width: fit-content;
-      padding: 30px 0 0 40px;
-    }
-    .links img {
-      width: 15%;
-      position: absolute;
-      bottom: -120px;
-      right: 30px;
+      padding: 60px 0 0 70px;
     }
     .info {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 40px 0 50px 40px;
+      padding: 60px 0 0 0;
     }
-    .info p {
-      font-size: 16px;
-      color: var(--blueColor);
+    .links img {
+      width: 6%;
+      bottom: 30px;
+      left: 30px;
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+    .scroll_btn {
+      display: none;
     }
-    .tilmed,
-    p,
-    label,
-    button {
-      color: var(--beigeColor);
-    }
-
-    input {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid var(--beigeColor);
-      margin-top: 20px;
-      color: var(--beigeColor);
-      width: 100%;
-    }
-    input:focus {
-      outline: none;
-      caret-color: var(--beigeColor);
-      color: var(--beigeColor);
-    }
-    button {
-      width: fit-content;
-      padding: 5px 30px;
-      background-color: transparent;
-      border: 1px solid var(--beigeColor);
-    }
-    button:hover {
-      color: var(--blueColor);
-      background-color: var(--beigeColor);
-      cursor: pointer;
-    }
-
-    /* Desktop version */
-    @media screen and (min-width: 800px) {
-      .grid_1-1-1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      .flex_links {
-        padding: 60px 0 0 70px;
-      }
-      .info {
-        padding: 60px 0 0 0;
-      }
-      .links img {
-        width: 6%;
-        bottom: 30px;
-        left: 30px;
-      }
-      .tilmeld {
-        padding: 100px;
-      }
-    }
-  </style>
-</section>
+  }
+</style>
