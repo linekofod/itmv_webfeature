@@ -6,57 +6,63 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout title="Vidste du?" />
 <section class="full_height blue_bg grid_1-1" id="vidste_du">
   <img class="tråd2" src="/public/imgs/tråd2.svg" alt="Rød tråd" />
-  <img class="pude" src="/imgs/PUDE 1.png" alt="" />
+  <img class="pude" src="/imgs/PUDE1.png" alt="Hænder der holder en pude" />
   <div class="beige_text">
-    <p>
-      Når du køber vores produkter, støtter du kvinder, som står uden for det
-      danske arbejdsmarked. <br />
+    <span class="cirkel"></span>
+    <div class="text">
+      <p>
+        Når du køber vores produkter, støtter du kvinder, som står uden for det
+        danske arbejdsmarked. <br />
 
-      <br />Du får designprodukter, der er med til at fremme dansk produktion,
-      da alle vores produkter laves lokalt i vores værksteder på Nørrebro og
-      Farum.<br />
+        <br />Du får designprodukter, der er med til at fremme dansk produktion,
+        da alle vores produkter laves lokalt i vores værksteder på Nørrebro og
+        Farum.<br />
 
-      <br />Samtidig er du med til at tage ansvar, fordi kasserede tekstiler får
-      nyt liv.
-    </p>
+        <br />Samtidig er du med til at tage ansvar, fordi kasserede tekstiler
+        får nyt liv.
+      </p>
+    </div>
   </div>
 </section>
 <MainLayout />
 
 <style>
+  section {
+    height: 100vh;
+  }
   .tråd2 {
-    position: absolute;
+    /* position: absolute;
     right: 2%;
     top: 20%;
-    z-index: 0;
+    z-index: 0; */
+    display: none;
   }
-
   .beige_text {
-    padding: 30px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     position: relative;
     z-index: 2;
     justify-content: center;
+    align-items: center;
+    position: relative;
   }
-
-  .logo {
+  .cirkel {
+    display: none;
+  }
+  .text {
     position: absolute;
-    width: 43%;
-    z-index: 2;
+    padding: 20px;
+    top: 50px;
+  }
+  .pude {
+    position: relative;
+    top: 50px;
   }
 
   /* Desktop version */
 
   @media screen and (min-width: 800px) {
-    .section1 {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 50px;
-    }
     .tråd2 {
       right: 10%;
       top: 0;
@@ -66,17 +72,31 @@ import MainLayout from "../layouts/MainLayout.astro";
     .beige_text {
       padding: 0 160px 0 0;
     }
+    .cirkel {
+      display: block;
+      position: absolute;
+      top: 25%;
+      z-index: 1;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background-image: linear-gradient(
+        to right,
+        #d08a77,
+        #febbc9,
+        #d48291,
+        #d5cdcc
+      );
+    }
+    .text {
+      position: relative;
+    }
     img {
       height: 100vh;
     }
-
     .pude {
       height: 80vh;
       margin-top: 70px;
-    }
-
-    .logo {
-      width: 13%;
     }
   }
 </style>
