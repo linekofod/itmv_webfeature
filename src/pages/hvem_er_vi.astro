@@ -30,10 +30,6 @@ import MainLayout from "../layouts/MainLayout.astro";
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen></iframe>
     </div>
-
-    <!-- <video src="/videos/landingpage.mp4" autoplay muted loop>
-    Your browser does not support the video tag.</video
-  > -->
   </div>
   <MainLayout />
 
@@ -43,7 +39,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 50px;
+      background-color: var(--beigeColor);
     }
     .tråd2 {
       position: absolute;
@@ -94,8 +90,18 @@ import MainLayout from "../layouts/MainLayout.astro";
       img {
         height: 100vh;
       }
-      video {
-        height: auto;
+      .video_container {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 100vh;
+        transform: translate(-50%, -50%);
       }
     }
   </style>

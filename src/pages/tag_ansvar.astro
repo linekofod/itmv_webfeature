@@ -9,16 +9,21 @@ import MainLayout from "../layouts/MainLayout.astro";
   <img src="/imgs/ansvar.png" alt="" />
   <div class="blue_text">
     <h1>Vi tager ansvar</h1>
-    <p>
-      Siden 2018 har vi været registreret som en socialøkonomisk virksomhed, der
-      beskæftiger udsatte kvinder i Danmark. Vi bidrager til et rummeligt
-      arbejdsmarked ved at ansætte kvinder i ordinær beskæftigelse med fokus på
-      kvindernes kompetencer og ressourcer, som skal sættes i spil på det danske
-      arbejdsmarked. Vi tror på, at mennesker bliver gladere og stærkere af at
-      arbejde med noget de brænder for. Desuden ønsker vi at bidrage til den
-      grønne omstilling ved at skabe en cirkulær produktion, hvor kasserede
-      tekstiler kan få nyt liv i stedet for at ende på forbrændingen.
-    </p>
+    <div class="text">
+      <p>
+        Siden 2018 har vi været registreret som en socialøkonomisk virksomhed,
+        der beskæftiger udsatte kvinder i Danmark. Vi bidrager til et rummeligt
+        arbejdsmarked ved at ansætte kvinder i ordinær beskæftigelse med fokus
+        på kvindernes kompetencer og ressourcer, som skal sættes i spil på det
+        danske arbejdsmarked.
+      </p>
+      <p>
+        Vi tror på, at mennesker bliver gladere og stærkere af at arbejde med
+        noget de brænder for. Desuden ønsker vi at bidrage til den grønne
+        omstilling ved at skabe en cirkulær produktion, hvor kasserede tekstiler
+        kan få nyt liv i stedet for at ende på forbrændingen.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -39,6 +44,11 @@ import MainLayout from "../layouts/MainLayout.astro";
     gap: 20px;
     position: relative;
     z-index: 2;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
   video {
     width: 100%;
