@@ -20,58 +20,25 @@ import MainLayout from "../layouts/MainLayout.astro";
   </div>
 </section>
 <section class="section2 full_height" id="hvem_er_vi2">
-  <img class="tråd3" src="/public/imgs/tråd3.svg" alt="Rød tråd" />
-  <img class="logo" src="/imgs/logo.svg" alt="Logo af I tråd med verden" />
-  <video src="/videos/landingpage.mp4" autoplay muted loop>
+  <div class="video_container">
+    <div>
+      <iframe
+        src="https://www.youtube.com/embed/HexL-TPhk-Y?si=9kT1018rxbtZZ319"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+
+    <!-- <video src="/videos/landingpage.mp4" autoplay muted loop>
     Your browser does not support the video tag.</video
-  >
-</section>
-<MainLayout />
+  > -->
+  </div>
+  <MainLayout />
 
-<style>
-  .section2 {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-  }
-  .tråd2 {
-    position: absolute;
-    right: 2%;
-    top: 20%;
-    z-index: 0;
-  }
-  .tråd3 {
-    position: absolute;
-    right: 47%;
-    z-index: 1;
-    top: 0;
-  }
-  .beige_text {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    z-index: 2;
-  }
-  video {
-    width: 100%;
-    object-fit: cover;
-    align-self: stretch;
-    height: 100vh;
-  }
-  .logo {
-    position: absolute;
-    width: 43%;
-    z-index: 2;
-  }
-
-  /* Desktop version */
-
-  @media screen and (min-width: 800px) {
-    .section1 {
+  <style>
+    .section2 {
       position: relative;
       display: flex;
       align-items: center;
@@ -79,25 +46,57 @@ import MainLayout from "../layouts/MainLayout.astro";
       gap: 50px;
     }
     .tråd2 {
-      right: 10%;
-      top: 0;
-      height: 100vh;
-    }
-    .tråd3 {
-      right: 19%;
-      height: 100vh;
+      position: absolute;
+      right: 2%;
+      top: 20%;
+      z-index: 0;
     }
     .beige_text {
-      padding: 0 160px 0 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
     }
-    img {
+    .video_container {
+      width: 100vw;
       height: 100vh;
     }
-    video {
-      height: auto;
+
+    iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 100vh;
+      transform: translate(-50%, -50%);
     }
-    .logo {
-      width: 13%;
+
+    /* Desktop version */
+
+    @media screen and (min-width: 800px) {
+      .section1 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+      }
+      .tråd2 {
+        right: 10%;
+        top: 0;
+        height: 100vh;
+      }
+      .beige_text {
+        padding: 0 160px 0 0;
+      }
+      img {
+        height: 100vh;
+      }
+      video {
+        height: auto;
+      }
     }
-  }
-</style>
+  </style>
+</section>
