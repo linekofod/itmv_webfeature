@@ -4,6 +4,52 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Velkommen" />
+<header>
+  <nav>
+    <span class="line"></span>
+    <div class="nav-item">
+      <a class="nav-link" id="first-link" href="#velkommen"></a>
+      <span class="nav-label">Velkommen</span>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#hvem_er_vi1"></a>
+      <span class="nav-label">Hvem er vi?</span>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#hvem_er_vi2"></a>
+      <span class="nav-label">Hvem er vi?</span>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#fakta"></a>
+      <span class="nav-label">Fakta</span>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#produkter"></a>
+      <span class="nav-label">Produkter</span>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#tag_ansvar"></a>
+      <span class="nav-label">Tag ansvar</span>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#gør_en_forskel"></a>
+      <span class="nav-label">Gør en forskel</span>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#vidste_du"></a>
+      <span class="nav-label">Vidste du?</span>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#hjælp_verden"></a>
+      <span class="nav-label">Hjælp verden</span>
+    </div>
+    <div class="scroll_btn bouncing">
+      <a href="">Scroll ned</a>
+      <a class="arrow down" href=""></a>
+    </div>
+  </nav>
+</header>
+<!-- Velkommen -->
 <section class="full_height beige_bg grid_1-1" id="velkommen">
   <div class="text_side">
     <img class="logo" src="/imgs/logo.svg" alt="Logo af I tråd med verden" />
@@ -20,83 +66,339 @@ import MainLayout from "../layouts/MainLayout.astro";
     Your browser does not support the video tag.</video
   >
 </section>
+
+<!-- Hvem er vi? -->
+<section class="full_height blue_bg grid_1-1" id="hvem_er_vi1">
+  <div class="img_container">
+    <img src="/imgs/dame.webp" alt="" />
+  </div>
+  <div class="beige_text">
+    <h1>Vi er i tråd med verden</h1>
+    <p>
+      I Tråd Med Verden (ITMV) er en socialøkonomisk virksomhed drevet af
+      foreningen I Tråd Med Verden. I partnerskab med KAB driver vi sy- og
+      design værksteder i udsatte boligområder, hvor vi arbejder med design og
+      genanvendelse af kasserede tekstiler som omdrejningspunkt for at skabe
+      jobmuligheder, netværk og livskvalitet for mennesker, som har mistet
+      fodfæste på arbejdsmarkedet.
+    </p>
+  </div>
+</section>
+
+<section class="full_height" id="hvem_er_vi2">
+  <div class="video_container">
+    <div>
+      <iframe
+        src="https://www.youtube.com/embed/HexL-TPhk-Y?si=2C5LoCjlsbZEaD-M"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Fakta -->
+<section class="full_height grid_1-1-1 beige_bg" id="fakta">
+  <div class="img_section_fakta">
+    <div class="img_text_fakta">
+      <img
+        class="myImageFakta"
+        id="tekstil"
+        src="/imgs/klud.webp"
+        alt="Your Image"
+      />
+      <h2 class="h2_fakta">1. Overskydende tekstil</h2>
+    </div>
+    <div class="description_fakta">
+      Siden 2018 har vores designprocesser på værkstedet taget udgangspunkt i
+      kasserede tekstiler. Vi modtager og genanvender årligt over 2 tons
+      tekstiler fra samarbejdsvirksomheder.
+    </div>
+    <span class="line_fakta"></span>
+  </div>
+  <div class="img_section_fakta">
+    <div class="img_text_fakta">
+      <img class="myImageFakta" src="/imgs/blad.webp" alt="Your Image" />
+      <h2 class="h2_fakta">2. Vi farver med plantefarve</h2>
+    </div>
+    <div class="description_fakta">
+      Plantefarve er blevet en vigtig del af vores design DNA. <br />Det har
+      været en fast teknik til bearbejdning og fornyelse af de kasserede
+      tekstiler siden 2018.
+    </div>
+    <span class="line_fakta"></span>
+  </div>
+  <div class="img_section_fakta">
+    <div class="img_text_fakta">
+      <img class="myImageFakta" src="/imgs/nål.webp" alt="Your Image" />
+      <h2 class="h2_fakta">3. Vi syer</h2>
+    </div>
+    <div class="description_fakta">
+      De fleste af vores syersker har erfaring med den tekniske del af faget fra
+      tidligere. <br />Dog står de aldrig alene med en proces, der vil altid
+      være en af vores designere tilknyttet.
+    </div>
+  </div>
+</section>
+
+<!-- Produkter -->
+<section class="full_height blue_bg grid_1-1" id="produkter">
+  <div class="img_container">
+    <img src="/imgs/værelse.webp" alt="Værelse med gardin" />
+  </div>
+  <div class="beige_text">
+    <h1>Vi tager ansvar</h1>
+    <div class="text">
+      <p>
+        Siden 2018 har vi været registreret som en socialøkonomisk virksomhed,
+        der beskæftiger udsatte kvinder i Danmark.
+      </p>
+      <p>
+        Vi bidrager til et rummeligt arbejdsmarked ved at ansætte kvinder i
+        ordinær beskæftigelse med fokus på kvindernes kompetencer og ressourcer,
+        som skal sættes i spil på det danske arbejdsmarked.
+      </p>
+      <p>
+        Vi tror på, at mennesker bliver gladere og stærkere af at arbejde med
+        noget de brænder for. Desuden ønsker vi at bidrage til den grønne
+        omstilling ved at skabe en cirkulær produktion, hvor kasserede tekstiler
+        kan få nyt liv i stedet for at ende på forbrændingen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Tag ansvar -->
+<section class="full_height beige_bg grid_1-1" id="tag_ansvar">
+  <div class="img_container">
+    <img src="/imgs/ansvar.webp" alt="" />
+  </div>
+  <div class="blue_text">
+    <h1>Skal din virksomhed <br /> være med til at tage ansvar?</h1>
+    <div class="text">
+      <p>
+        Siden 2018 har vi været registreret som en socialøkonomisk virksomhed,
+        der beskæftiger udsatte kvinder i Danmark.
+      </p>
+      <p>
+        Vi bidrager til et rummeligt arbejdsmarked ved at ansætte kvinder i
+        ordinær beskæftigelse med fokus på kvindernes kompetencer og ressourcer,
+        som skal sættes i spil på det danske arbejdsmarked.
+      </p>
+      <p>
+        Vi tror på, at mennesker bliver gladere og stærkere af at arbejde med
+        noget de brænder for. Desuden ønsker vi at bidrage til den grønne
+        omstilling ved at skabe en cirkulær produktion, hvor kasserede tekstiler
+        kan få nyt liv i stedet for at ende på forbrændingen.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Gør en forskel -->
+<section class="full_height grid_1-1-1" id="gør_en_forskel">
+  <div class="img_section">
+    <div class="img_text">
+      <img src="/imgs/dame2.webp" alt="Dame der broderer" />
+      <h2 class="h2">Donér til virksomheden</h2>
+    </div>
+    <a class="btn" href="https://www.itmv.dk/pages/donation" target="_blank"
+      >Se mere</a
+    >
+    <span class="line"></span>
+  </div>
+  <div class="img_section">
+    <div class="img_text">
+      <img src="/imgs/gardiner.webp" alt="Gardiner" />
+      <h2 class="h2">Vores produkter</h2>
+    </div>
+    <a class="btn" href="https://www.itmv.dk/collections/all" target="_blank"
+      >Se mere</a
+    >
+    <span class="line"></span>
+  </div>
+  <div class="img_section">
+    <div class="img_text">
+      <img src="/imgs/skilt.webp" alt="Skilt af I tråd med verden" />
+      <h2 class="h2">Repair service</h2>
+    </div>
+    <a
+      class="btn"
+      href="https://www.itmv.dk/pages/repair-service"
+      target="_blank">Se mere</a
+    >
+  </div>
+</section>
+
+<!-- Vidste du? -->
+<section class="full_height blue_bg grid_1-1" id="vidste_du">
+  <img class="pude" src="/imgs/pude.webp" alt="Hænder der holder en pude" />
+  <div class="beige_text">
+    <span class="cirkel"></span>
+    <div class="text">
+      <p>
+        Når du køber vores produkter, støtter du kvinder, som står uden for det
+        danske arbejdsmarked. <br />
+
+        <br />Du får designprodukter, der er med til at fremme dansk produktion,
+        da alle vores produkter laves lokalt i vores værksteder på Nørrebro og
+        Farum.<br />
+
+        <br />Samtidig er du med til at tage ansvar, fordi kasserede tekstiler
+        får nyt liv.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Hjælp verden -->
+<section class="full_height grid_1-1-1" id="hjælp_verden">
+  <div class="img_section">
+    <div class="img_text">
+      <img
+        src="/imgs/personale.webp"
+        alt="Personalet og ejerne af I tråd med verden"
+      />
+      <h2 class="h2">Køb vores produkter</h2>
+    </div>
+    <a class="btn" href="https://www.itmv.dk/collections/all" target="_blank"
+      >Se mere</a
+    >
+  </div>
+  <div class="img_section">
+    <div class="img_text">
+      <img src="/imgs/gardin.webp" alt="Et gardin" />
+      <h2 class="h2">Kontakt os</h2>
+    </div>
+    <a class="btn" href="https://www.itmv.dk/pages/contact" target="_blank"
+      >Se mere</a
+    >
+    <span class="line"></span>
+  </div>
+  <div class="img_section">
+    <div class="img_text">
+      <img
+        src="/imgs/puder.webp"
+        alt="En masse puder stablet ovenpå hinanden"
+      />
+      <h2 class="h2">Donér til virksomheden</h2>
+    </div>
+    <a class="btn" href="https://www.itmv.dk/pages/donation" target="_blank"
+      >Se mere</a
+    >
+    <span class="line"></span>
+  </div>
+</section>
 <MainLayout />
 
-<style>
-  #velkommen {
-    position: relative;
-    height: 100vh;
-  }
-  #velkommen .cirkel {
-    position: absolute;
-    top: 40%;
-    left: -30%;
-    z-index: 1;
-    height: 340px;
-    width: 340px;
-    border-radius: 50%;
-    background-image: linear-gradient(
-      to right,
-      #d08a77,
-      #febbc9,
-      #d48291,
-      #d5cdcc
+<script>
+  // Navigation
+  // Definerer variabler for section elementer og link elementer
+  let sections = document.querySelectorAll("section");
+  let navLinks = document.querySelectorAll(".nav-link");
+
+  // Lytter til scroll på siden, og går så til funktion
+  window.onscroll = () => {
+    // Itererer gennem hver <section> på siden
+    sections.forEach((sec) => {
+      // top: Den aktuelle scroll position af vinduet.
+      // offset: Den top position af den nuværende sektion minus 150 pixels. Dette giver en lille margen fra toppen, så navigationen opdateres lidt før brugeren når den næste sektion.
+      // height: Højden af den aktuelle sektion.
+      // id: ID'et af den aktuelle sektion.
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 150;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute("id");
+
+      // Dette tjekker, om den aktuelle scroll position er mellem offset og offset + height,
+      // hvilket betyder, at brugeren er inden for den nuværende sektion.
+      if (top >= offset && top < offset + height) {
+        // For hver navigation link:
+        // Fjerner den active klasse fra alle links.
+        // Tilføjer active klassen til linket, der har en href attribut, der matcher ID'et af den aktuelle sektion.
+        navLinks.forEach((links) => {
+          links.classList.remove("active");
+          document
+            .querySelector(".nav-link[href*=" + id + "]")
+            .classList.add("active");
+        });
+      }
+    });
+  };
+
+  // Fakta
+  // Vælger alle .img_section elementer
+  const imgSectionsFakta = document.querySelectorAll(".img_section_fakta");
+
+  // Itererer gennem alle .img_section elementer
+  imgSectionsFakta.forEach((imgSection) => {
+    const imgTextFakta = imgSection.querySelector(".img_text_fakta");
+    const descriptionFakta = imgSection.querySelector(".description_fakta");
+    const h2Fakta = imgSection.querySelector(".h2_fakta");
+
+    // Tilføjer eventlistenere til elementer
+    imgTextFakta.addEventListener("mouseover", () =>
+      showDescription(descriptionFakta, h2Fakta)
     );
-    opacity: 50%;
-  }
-  #velkommen .text_side {
-    padding: 20px 0 0 0;
-    position: relative;
-  }
-  #velkommen .blue_text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    z-index: 2;
-    color: var(--beigeColor);
-    margin-top: 100%;
-    padding: 0 10px;
-  }
-  #velkommen video {
-    width: 100%;
-    object-fit: cover;
-    object-position: 90%;
-    align-self: stretch;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: 0;
-  }
-  #velkommen .logo {
-    display: none;
+    imgTextFakta.addEventListener("mouseout", () =>
+      hideDescription(descriptionFakta, h2Fakta)
+    );
+    descriptionFakta.addEventListener("mouseover", () =>
+      showDescription(descriptionFakta, h2Fakta)
+    );
+    descriptionFakta.addEventListener("mouseout", () =>
+      hideDescription(descriptionFakta, h2Fakta)
+    );
+  });
+
+  function showDescription(descriptionFakta, h2Fakta) {
+    // Viser description og hæver overskriften
+    descriptionFakta.classList.add("description_up_fakta");
+    descriptionFakta.classList.remove("description_down_fakta");
+    h2Fakta.classList.add("h2_up_fakta");
+    h2Fakta.classList.remove("h2_down_fakta");
   }
 
-  /* Desktop version */
-
-  @media screen and (min-width: 800px) {
-    #velkommen .cirkel {
-      left: 32%;
-      top: 30%;
-    }
-    #velkommen .text_side {
-      padding: 20px 0 0 20px;
-      position: relative;
-    }
-    #velkommen .blue_text {
-      padding: 150px 0 0 30px;
-      color: var(--blueColor);
-      margin: 0;
-    }
-    #velkommen video {
-      position: unset;
-    }
-    #velkommen .logo {
-      display: block;
-      position: unset;
-      padding: 0;
-      width: auto;
-      z-index: 1;
-    }
+  function hideDescription(descriptionFakta, h2Fakta) {
+    // Skjuler description og sænker overskriften
+    descriptionFakta.classList.remove("description_up_fakta");
+    descriptionFakta.classList.add("description_down_fakta");
+    h2Fakta.classList.remove("h2_up_fakta");
+    h2Fakta.classList.add("h2_down_fakta");
   }
-</style>
+
+  // Gør en forskel & Vidste du?
+  // Vælger alle .img_section elementer
+  const imgSections = document.querySelectorAll(".img_section");
+
+  // Itererer gennem alle .img_section elementer
+  imgSections.forEach((imgSection) => {
+    const imgText = imgSection.querySelector(".img_text");
+    const btn = imgSection.querySelector(".btn");
+    const text = imgSection.querySelector(".h2");
+
+    // Tilføjer eventlistenere til elementer
+    imgText.addEventListener("mouseover", () => showBtn(btn, text));
+    imgText.addEventListener("mouseout", () => hideBtn(btn, text));
+    btn.addEventListener("mouseover", () => showBtn(btn, text));
+    btn.addEventListener("mouseout", () => hideBtn(btn, text));
+  });
+
+  function showBtn(btn, text) {
+    // Viser knapper og hæver overskriften
+    btn.classList.add("btn_up");
+    btn.classList.remove("btn_down");
+    text.classList.add("text_up");
+    text.classList.remove("text_down");
+  }
+
+  function hideBtn(btn, text) {
+    // Skjuler knappen og sænker overskriften
+    btn.classList.remove("btn_up");
+    btn.classList.add("btn_down");
+    text.classList.remove("text_up");
+    text.classList.add("text_down");
+  }
+</script>

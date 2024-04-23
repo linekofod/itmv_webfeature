@@ -1,0 +1,102 @@
+---
+import "../styles/style.css";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Velkommen" />
+<section class="full_height beige_bg grid_1-1" id="velkommen">
+  <div class="text_side">
+    <img class="logo" src="/imgs/logo.svg" alt="Logo af I tråd med verden" />
+    <div class="blue_text">
+      <h1>Fra krig til <br /> syerske i Danmark</h1>
+      <p>
+        Se her hvordan vores produkter bliver fremstillet, og hvem menneskerne
+        er bag dit nye gardin.
+      </p>
+    </div>
+  </div>
+  <span class="cirkel"></span>
+  <video src="/videos/landingpage.mp4" autoplay muted loop>
+    Your browser does not support the video tag.</video
+  >
+</section>
+<MainLayout />
+
+<style>
+  #velkommen {
+    position: relative;
+    height: 100vh;
+  }
+  #velkommen .cirkel {
+    position: absolute;
+    top: 40%;
+    left: -30%;
+    z-index: 1;
+    height: 340px;
+    width: 340px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+      to right,
+      #d08a77,
+      #febbc9,
+      #d48291,
+      #d5cdcc
+    );
+    opacity: 50%;
+  }
+  #velkommen .text_side {
+    padding: 20px 0 0 0;
+    position: relative;
+  }
+  #velkommen .blue_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+    color: var(--beigeColor);
+    margin-top: 100%;
+    padding: 0 10px;
+  }
+  #velkommen video {
+    width: 100%;
+    object-fit: cover;
+    object-position: 90%;
+    align-self: stretch;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  #velkommen .logo {
+    display: none;
+  }
+
+  /* Desktop version */
+
+  @media screen and (min-width: 800px) {
+    #velkommen .cirkel {
+      left: 32%;
+      top: 30%;
+    }
+    #velkommen .text_side {
+      padding: 20px 0 0 20px;
+      position: relative;
+    }
+    #velkommen .blue_text {
+      padding: 150px 0 0 30px;
+      color: var(--blueColor);
+      margin: 0;
+    }
+    #velkommen video {
+      position: unset;
+    }
+    #velkommen .logo {
+      display: block;
+      position: unset;
+      padding: 0;
+      width: auto;
+      z-index: 1;
+    }
+  }
+</style>

@@ -1,15 +1,16 @@
 ---
 import "../styles/style.css";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <nav class="nav">
   <span class="line"></span>
   <div class="nav-item">
-    <a class="nav-link" href="/"></a>
+    <a class="nav-link active" id="first-link" href="#velkommen"></a>
     <span class="nav-label">Velkommen</span>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="/hvem_er_vi"></a>
+    <a class="nav-link" href="#hvem_er_vi1"></a>
     <span class="nav-label">Hvem er vi?</span>
   </div>
   <div class="nav-item">
@@ -17,27 +18,27 @@ import "../styles/style.css";
     <span class="nav-label">Hvem er vi?</span>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="/fakta"></a>
+    <a class="nav-link" href="#fakta"></a>
     <span class="nav-label">Fakta</span>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="/produkter"></a>
+    <a class="nav-link" href="#produkter"></a>
     <span class="nav-label">Produkter</span>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="/tag_ansvar"></a>
+    <a class="nav-link" href="#tag_ansvar"></a>
     <span class="nav-label">Tag ansvar</span>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="/gør_en_forskel"></a>
+    <a class="nav-link" href="#gør_en_forskel"></a>
     <span class="nav-label">Gør en forskel</span>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="/vidste_du"></a>
+    <a class="nav-link" href="#vidste_du"></a>
     <span class="nav-label">Vidste du?</span>
   </div>
   <div class="nav-item">
-    <a class="nav-link" href="/hjælp_verden"></a>
+    <a class="nav-link" href="#hjælp_verden"></a>
     <span class="nav-label">Hjælp verden</span>
   </div>
   <div class="scroll_btn bouncing">
@@ -145,21 +146,34 @@ import "../styles/style.css";
   }
 </style>
 
-<!-- <script>
-  const navLinks = document.querySelectorAll(".nav-link");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Find alle links i navigationen
+    const alleLinks = document.querySelectorAll(".nav-link");
 
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
+    // For hvert link i navigationen
+    alleLinks.forEach((etLink) => {
+      // Når man klikker på et link
+      etLink.addEventListener("click", function (klikEvent) {
+        // Fjern "aktiv" fra alle links
+        alleLinks.forEach((link) => {
+          link.classList.remove("active");
+        });
 
-    // Brug `slice` for at fjerne `/` i pathname
-    const currentPath = window.location.pathname.slice("1");
+        // Gør det klikkede link "aktivt"
+        klikEvent.currentTarget.classList.add("active");
+      });
+    });
 
-    // `link.href` returnerer en hel url, men vi har kun brug for en sidste del i urlen, der indikerer hvilken side vi er på
-    const hrefArray = link.href.split("/");
-    const thisPath = hrefArray[hrefArray.length - 1];
-
-    if (currentPath === thisPath) {
-      link.classList.add("active");
+    // Scrolle til #velkommen sektionen hvis siden er blevet refresher
+    if (
+      performance &&
+      performance.navigation.type === performance.navigation.TYPE_RELOAD
+    ) {
+      const velkommenSektion = document.getElementById("velkommen");
+      if (velkommenSektion) {
+        velkommenSektion.scrollIntoView();
+      }
     }
   });
-</script> -->
+</script>
